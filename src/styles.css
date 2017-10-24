@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+}
+.main-container{
+  margin-top: 110px;
+}
+
+.border-focus{
+  /*border-style: solid;
+  border-color: #000;*/
+  box-shadow: 5px 10px 7px rgba(0,0,0,0.5);
+}
+
+
+/* Animaciones*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.img-casa{
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+
+}

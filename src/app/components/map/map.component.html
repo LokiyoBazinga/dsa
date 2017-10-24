@@ -1,0 +1,66 @@
+<!--<div id="map"></div>
+
+<div id="map" class="affix col-md-12"></div>
+<div class="list-bottom">
+  <div class="card-columns">
+    <div class="card animate fadeIn fast" *ngFor="let heroe of heroes; let i = index " id = "{{heroe.nombre}}" #holo>
+      <img class="card-img-top img-fluid" src="{{heroe.img}}" alt="">
+      <img class="card-img-top text-center" [src]="heroe.img" [alt]="heroe.nombre" style="height:203px;width:200px;margin:0 auto;">
+     <div class="card-body"  #heroesdiv>
+        <h4 class="card-title text-center">{{ heroe.nombre }}</h4>
+        <p class="card-text">{{ heroe.bio }}</p>
+        <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+        <button (click)="focuss = 0"
+        type="button" name="button" class="btn btn-outline-primary btn-block">
+          ver más..
+        </button>
+        <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary">Ver más link..</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">List group item heading</h5>
+        <small>3 days ago</small>
+      </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small>Donec id elit non mi porta.</small>
+  </a>
+    </div>
+  </div>
+    <div class="col-md-7">
+      <div id="map">
+      </div>
+    </div>
+  </div>-->
+
+  <div class="container main-container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div id="map"></div>
+
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="card-columns">
+          <div class="card animate fadeIn fast" *ngFor="let heroe of heroes; let i = index " id = "{{heroe.nombre}}" (click)="onClickMarker(heroe.nombre);" #holo>
+            <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre"/>
+            <br/>
+            <br/>
+            <button (click)="verDetalles(heroe.nombre)"
+            type="button" name="button" class="btn btn-outline-primary btn-block">
+              ver detalles...
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+        <!--<img class="card-img-top img-fluid" src="{{heroe.img}}" alt="">-->

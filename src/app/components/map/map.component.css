@@ -1,0 +1,9 @@
+#map{
+  height: 600px;
+  width: 100%;
+}
+.list-bottom{
+  position: absolute;
+  padding: 410px 0px 0px 0px;
+  right: 0;
+}
